@@ -3,7 +3,6 @@
     // Only change code below this line
 
        // Instruction: require all the files you need here. Tips: (includes/functions.php, includes/class-products.php)
-       session_start();
        require "includes/class-products.php";
        require "includes/functions.php";
 
