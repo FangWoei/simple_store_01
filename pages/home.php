@@ -7,12 +7,7 @@
     // Only change code below this line
 
        // Instruction: require all the files you need here. Tips: (includes/functions.php, includes/class-products.php)
-
-
-    $product= $products->getProducts();
-       if($_SERVER['REQUEST_METHOD']=='POST'){
-            $products->toggleWishlist($_POST['id']);
-       }
+       $all_products = $products->getProducts();
 
     // Only change code above this line
 ?>
@@ -44,7 +39,7 @@
                 <div class="col">
                     <div class="card h-100">
                         <form
-                            action="<?php echo $_SERVER['REQUEST_URI']; ?>"
+                            action="wishlist/submit"
                             method="post">
                             <input type="hidden" name="id" value="<?= $product['id']?>">
                             <input type="hidden" name="is_wishlist" value="<?= $product['is_wishlist'];?>">
